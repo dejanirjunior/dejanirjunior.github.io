@@ -1,4 +1,4 @@
-<img src="assets/profile.jpg" width="160" style="border-radius: 50%;" />
+<img src="assets/profile.png" width="160" style="border-radius: 50%;" />
 
 # Dejanir Junior
 
