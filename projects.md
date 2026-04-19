@@ -1,13 +1,27 @@
 # Projects
 
-## Trello Forecast Engine
-Monte Carlo simulation for agile forecasting.
+## 🧠 Decision Systems
 
-## Meeting AI Automation
-Processing meeting transcripts into structured outputs.
+### Trello Forecast Engine
+Monte Carlo simulation applied to agile delivery forecasting.
 
-## Governance Dashboards
-Executive dashboards for IT management.
+- Probabilistic delivery dates (P50, P85, P95)
+- Cycle time analysis
+- API integration
+
+---
+
+## 🤖 Automation
+
+### Meeting AI Pipeline
+Automated transformation of meeting transcripts into structured outputs.
+
+---
+
+## 📊 Data & BI
+
+### Governance Dashboards
+Executive dashboards for IT performance and cost tracking.
 
 ---
 
