@@ -1,7 +1,8 @@
 <img src="assets/profile.jpg" width="160" style="border-radius: 50%;" />
 
+# Dejanir Junior
 
-Technology Strategy | Project Leadership | Education Systems
+## Technology Strategy | Project Leadership | Education Systems
 
 Driving digital transformation and connecting business, technology, and education through data-driven solutions.
 
