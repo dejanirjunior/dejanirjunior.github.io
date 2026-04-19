@@ -10,3 +10,4 @@
 
 - Bridge between business and technology
 - Research connected to practical solutions
+
