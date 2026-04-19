@@ -7,3 +7,6 @@ header_pages:
   - projects.md
   - research.md
   - impact.md
+
+minima:
+  skin: dark
