@@ -1,8 +1,9 @@
-<img src="assets/profile.png" width="160" style="border-radius: 50%;" />
+---
+layout: home
+author_profile: true
+---
 
-# Dejanir Junior
-
-## Technology Strategy | Project Leadership | Education Systems
+## About
 
 Driving digital transformation and connecting business, technology, and education through data-driven solutions.
 
@@ -17,25 +18,10 @@ A complete offline AI ecosystem designed for education, research, and secure env
 
 ---
 
-### Trello Monte Carlo Forecast (in progress)
-Probabilistic forecasting model for agile teams using real delivery data.
+### Trello Monte Carlo Forecast
+Probabilistic forecasting for agile teams using real delivery data.
 
 ---
 
 ### IT Governance & Analytics
 Power BI dashboards supporting executive decision-making in global environments.
-
----
-
-## 🧠 Research
-
-MSc in Technological Education  
-Focus: Computational Thinking and its impact on educational performance (PISA)
-
----
-
-## 🌍 Connect
-
-- [LinkedIn](https://www.linkedin.com/in/juniordejanir)
-- [GitHub](https://github.com/dejanirjunior)
-- [PTT Website](https://sites.google.com/view/guiatecnico)
