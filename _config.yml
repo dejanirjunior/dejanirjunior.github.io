@@ -1,0 +1,9 @@
+title: "Dejanir Junior"
+description: "Technology Strategy | Project Leadership | Education Systems"
+theme: minima
+
+header_pages:
+  - about.md
+  - projects.md
+  - research.md
+  - impact.md
