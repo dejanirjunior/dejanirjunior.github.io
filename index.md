@@ -1,6 +1,5 @@
 <img src="assets/profile.jpg" width="160" style="border-radius: 50%;" />
 
-## Dejanir Junior
 
 Technology Strategy | Project Leadership | Education Systems
 
