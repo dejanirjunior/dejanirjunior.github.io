@@ -1,18 +1,1 @@
-title: "Dejanir Junior"
-description: "Technology Strategy | Project Leadership | Education Systems"
 
-remote_theme: "mmistakes/minimal-mistakes"
-
-plugins:
-  - jekyll-include-cache
-
-author:
-  name: "Dejanir Junior"
-  avatar: "/assets/profile.png"
-  bio: "Technology Strategy | Project Leadership | Education Systems"
-  location: "Brazil"
-  links:
-    - label: "LinkedIn"
-      url: "https://www.linkedin.com/in/juniordejanir"
-    - label: "GitHub"
-      url: "https://github.com/dejanirjunior"
