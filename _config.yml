@@ -8,6 +8,7 @@ plugins:
 
 author:
   name: "Dejanir Junior"
+  avatar: "/assets/profile.png"
   bio: "Technology Strategy | Project Leadership | Education Systems"
   location: "Brazil"
   links:
