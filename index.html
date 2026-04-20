@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dejanir Junior | Technology Strategy | Project Leadership</title>
+  <meta name="description" content="Dejanir Junior — Technology Strategy, Project Leadership, Education Systems, data-driven solutions, research, and digital transformation." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121933;
+      --panel: rgba(17, 24, 39, 0.72);
+      --panel-strong: #131c31;
+      --text: #e5e7eb;
+      --muted: #98a2b3;
+      --line: rgba(148, 163, 184, 0.18);
+      --accent: #7dd3fc;
+      --accent-2: #c4b5fd;
+      --white: #ffffff;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(125, 211, 252, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(196, 181, 253, 0.14), transparent 24%),
+        linear-gradient(180deg, #0b1020 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(11, 16, 32, 0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--white);
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #08111f;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.98rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 4.5rem 0 2.25rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid rgba(125, 211, 252, 0.22);
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.08);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 1rem 0 0.75rem;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      color: var(--white);
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 720px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .hero-subtitle {
+      margin-top: 0.65rem !important;
+      font-size: 1.08rem;
+      color: #d6d9e0 !important;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #08111f;
+      background: linear-gradient(135deg, var(--accent), #a5f3fc);
+      box-shadow: 0 12px 30px rgba(125, 211, 252, 0.24);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(19, 28, 49, 0.92), rgba(16, 24, 43, 0.88));
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 1.15rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-photo {
+      aspect-ratio: 4 / 4.45;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(125, 211, 252, 0.14), rgba(196, 181, 253, 0.18));
+      border: 1px solid rgba(255,255,255,0.06);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-note {
+      margin-top: 0.95rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 0.9rem;
+    }
+
+    .mini-card strong {
+      display: block;
+      color: var(--white);
+      font-size: 1rem;
+    }
+
+    .mini-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 1.6rem 0;
+    }
+
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.6rem, 2vw, 2rem);
+      letter-spacing: -0.03em;
+      color: var(--white);
+    }
+
+    .section-intro {
+      margin: 0 0 1.5rem;
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 0.45rem;
+      color: var(--white);
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: #d9e1ea;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-height: 100%;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(125, 211, 252, 0.1);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .project-link {
+      margin-top: auto;
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .project-link:hover {
+      color: var(--accent);
+    }
+
+    .impact-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .impact-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .impact-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .impact-number {
+      font-size: 1.9rem;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.04em;
+    }
+
+    .impact-copy strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: var(--white);
+      font-size: 1.05rem;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-layout,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 3rem;
+      }
+
+      .hero-note {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        padding: 0.95rem 0;
+        align-items: start;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .impact-item {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        width: min(calc(100% - 1.2rem), var(--max));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark">DJ</span>
+        <span>Dejanir Junior</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Technology Strategy · Project Leadership · Education Systems</div>
+          <h1>Connecting business, technology, and research with practical execution.</h1>
+          <p class="hero-subtitle">Project leader, technology strategist, and applied researcher building data-driven solutions across corporate and academic environments.</p>
+          <p>From digital transformation and executive dashboards to education-focused AI initiatives, this portfolio brings together work at the intersection of strategy, delivery, analytics, and innovation.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View featured work</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/juniordejanir" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-secondary" href="https://github.com/dejanirjunior" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-photo">
+            <img src="assets/profile.png" alt="Portrait of Dejanir Junior" />
+          </div>
+
+          <div class="hero-note">
+            <div class="mini-card">
+              <strong>Global Programs</strong>
+              <span>Business, IT, and cross-functional delivery</span>
+            </div>
+            <div class="mini-card">
+              <strong>Applied Research</strong>
+              <span>Education systems, PISA, and computing</span>
+            </div>
+            <div class="mini-card">
+              <strong>Data-Driven Impact</strong>
+              <span>Automation, analytics, and decision support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-intro">Selected projects and initiatives that represent the strongest connection between your technical execution, strategic leadership, and academic direction.</p>
+
+        <div class="grid-3">
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Offline AI Kit for Education</h3>
+                <p>A practical ecosystem for local AI usage in education, research, and secure environments.</p>
+              </div>
+              <span class="project-tag">PTT</span>
+            </div>
+            <div class="badge-row">
+              <span class="badge">Offline AI</span>
+              <span class="badge">Education</span>
+              <span class="badge">Research</span>
+            </div>
+            <a class="project-link" href="https://sites.google.com/view/guiatecnico" target="_blank" rel="noreferrer">Open project ↗</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>Trello Monte Carlo Forecast</h3>
+                <p>A probabilistic forecasting model for agile teams based on delivery history and uncertainty analysis.</p>
+              </div>
+              <span class="project-tag">In Progress</span>
+            </div>
+            <div class="badge-row">
+              <span class="badge">Monte Carlo</span>
+              <span class="badge">Trello API</span>
+              <span class="badge">Forecasting</span>
+            </div>
+            <a class="project-link" href="https://github.com/dejanirjunior" target="_blank" rel="noreferrer">View repositories ↗</a>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-top">
+              <div>
+                <h3>IT Governance & Analytics</h3>
+                <p>Executive dashboards and structured visibility for costs, performance, and operational decision-making.</p>
+              </div>
+              <span class="project-tag">Power BI</span>
+            </div>
+            <div class="badge-row">
+              <span class="badge">Dashboards</span>
+              <span class="badge">Governance</span>
+              <span class="badge">Executive View</span>
+            </div>
+            <a class="project-link" href="https://www.linkedin.com/in/juniordejanir" target="_blank" rel="noreferrer">See background ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <div class="container grid-2">
+        <div class="card">
+          <h2 class="section-title">Impact</h2>
+          <p class="section-intro">Examples of outcomes that define the value brought across project delivery, automation, and business support.</p>
+
+          <div class="impact-list">
+            <div class="impact-item">
+              <div class="impact-number">30h</div>
+              <div class="impact-copy">
+                <strong>Weekly effort reduction</strong>
+                <span>Automation and BI initiatives contributed to reducing manual workload and improving process visibility.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="impact-number">Global</div>
+              <div class="impact-copy">
+                <strong>Cross-regional project experience</strong>
+                <span>Work spanning multinational contexts, international implementations, and collaboration across countries.</span>
+              </div>
+            </div>
+
+            <div class="impact-item">
+              <div class="impact-number">Award</div>
+              <div class="impact-copy">
+                <strong>Recognized delivery</strong>
+                <span>Projects connected to operational improvement, customer experience, and visibility have received recognition in global environments.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="research">
+          <h2 class="section-title">Research Direction</h2>
+          <p class="section-intro">Your academic work is a major differentiator. It should not look separate from your professional identity.</p>
+          <p>Current research centers on computational thinking, educational performance, and the relationship between computing education and international benchmarks such as PISA. The portfolio also highlights the Product-Technology output built around offline AI adoption for education and secure research settings.</p>
+          <div class="badge-row">
+            <span class="badge">PISA</span>
+            <span class="badge">Computational Thinking</span>
+            <span class="badge">Education Systems</span>
+            <span class="badge">Applied Research</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-layout">
+        <div class="card">
+          <h2 class="section-title">Professional Profile</h2>
+          <p class="section-intro">A profile built around strategy, execution, and the ability to translate complexity into practical outcomes.</p>
+          <p>With experience across project leadership, business-technology integration, analytics, and education-focused research, the profile combines structured delivery with a strong orientation toward evidence, innovation, and real-world implementation.</p>
+          <div class="badge-row">
+            <span class="badge">Project Management</span>
+            <span class="badge">Digital Transformation</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">Agile & Governance</span>
+            <span class="badge">Research & Writing</span>
+          </div>
+        </div>
+
+        <div class="card" id="contact">
+          <h2 class="section-title">Connect</h2>
+          <p class="section-intro">Use this site as the central hub for your academic and professional presence.</p>
+
+          <div class="contact-list">
+            <a class="contact-item" href="https://www.linkedin.com/in/juniordejanir" target="_blank" rel="noreferrer">
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Professional background and experience</span>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item" href="https://github.com/dejanirjunior" target="_blank" rel="noreferrer">
+              <div>
+                <strong>GitHub</strong>
+                <span>Repositories, experiments, and technical work</span>
+              </div>
+              <span>↗</span>
+            </a>
+
+            <a class="contact-item" href="https://sites.google.com/view/guiatecnico" target="_blank" rel="noreferrer">
+              <div>
+                <strong>PTT Website</strong>
+                <span>Offline AI Kit for Education and related material</span>
+              </div>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Dejanir Junior. Built as a professional portfolio hub connecting projects, research, and strategic technology work.</div>
+  </footer>
+</body>
+</html>
